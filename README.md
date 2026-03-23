@@ -33,3 +33,8 @@ npm install
 ## License
 
 MIT
+
+
+## Getting Started
+
+See individual files for usage details.
