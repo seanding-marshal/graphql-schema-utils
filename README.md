@@ -1,45 +1,51 @@
 # graphql-schema-utils
 
-A few utility scripts I wrote for working with GraphQL schemas across projects.
+A utility library for working with GraphQL schemas in Node.js, Go, and PostgreSQL environments.
 
-## Scripts
+## Features
+- Schema validation
+- Query optimization
+- Integration with PostgreSQL
+- Docker support for easy deployment
 
-### `schema-diff.js`
-Compare two GraphQL schema files and output breaking changes.
-
-```bash
-node schema-diff.js old-schema.graphql new-schema.graphql
-```
-
-### `introspect.js`
-Introspect a running GraphQL endpoint and save the schema.
-
-```bash
-node introspect.js http://localhost:4000/graphql > schema.graphql
-```
-
-## Install dependencies
-
-```bash
-npm install
-```
-
-## TODO
-
-- [ ] Add support for schema stitching diff
-- [ ] Output changes in JSON format
-- [ ] Add tests
-
-## License
-
-MIT
-
+## Tech Stack
+- Node.js
+- Go
+- PostgreSQL
+- Docker
 
 ## Getting Started
 
-See individual files for usage details.
+### Prerequisites
+- Node.js installed
+- PostgreSQL server running
+- Docker (optional)
 
+### Installation
+
+```bash
+npm install graphql-schema-utils
+```
+
+### Usage
+
+Example usage:
+
+```javascript
+const { validateSchema } = require('graphql-schema-utils');
+
+const schema = ... // your GraphQL schema
+validateSchema(schema).then(result => {
+  console.log(result);
+});
+```
+
+## Contributing
+Please read the [contributing guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-MIT
+## Acknowledgements
+- This project was inspired by the need for robust GraphQL schema validation tools.
+- Special thanks to the community for their support and contributions.
